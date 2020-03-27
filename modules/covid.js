@@ -26,9 +26,6 @@ function callAPI() {
 Cuối cùng Bot xin chúc toàn thể sunners chúng ta có 1 ngày làm việc vui vẻ (wasshoi)`
         sendMsg(template)
     })
-    .catch(function (err) {
-        callAPI();
-    })
 }
 
 
