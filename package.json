@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "viblo": "node ./modules/viblo.js",
-    "covid": "node ./modules/covid.js"
+    "covid": "node ./modules/covid.js",
+    "start": "node ./main.js"
   },
   "author": "hieudt",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "avengers-chatwork": "^1.0.1",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3"
   }
 }

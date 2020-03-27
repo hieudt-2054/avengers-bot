@@ -1,4 +1,5 @@
 require('dotenv').config()
+var exports = module.exports = {}
 const axios = require('axios').default;
 const moment = require('moment');
 moment.locale();
@@ -9,9 +10,7 @@ client.init({
     token: process.env.CHATWORK_API
 });
 
-callAPI();
-
-function callAPI() {
+exports.apiCovid = function () {
     axios.get('https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=VN')
     .then(function (response) {
         console.log(response.data[0]);
