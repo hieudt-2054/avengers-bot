@@ -7,6 +7,7 @@
     "test": "test",
     "viblo": "node ./modules/viblo.js",
     "covid": "node ./modules/covid.js",
+    "getPost": "node ./modules/getPost.js",
     "start": "node ./main.js"
   },
   "author": "hieudt",
