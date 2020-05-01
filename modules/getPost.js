@@ -26,6 +26,7 @@ const api = axios.create({
             var result = data.sort((a, b) => (a.views_count < b.views_count) ? 1 : -1);
             arrResult.push(result[0].url)
         })
+        console.log(arrResult);
     }
     fs.writeFileSync('./database/data', arrResult.join(','), 'utf-8'); 
     console.log('Write file done');
@@ -39,6 +40,8 @@ const api = axios.create({
         }
     })
     .then(function (response) {
+        console.log('From', fromLastMonth)
+        console.log('To', toLastMonth)
         vibloPostCollection = response.data.users;
         var result = vibloPostCollection.sort((a, b) => (a.total_viblo_postviews < b.total_viblo_postviews) ? 1 : -1);
         getDataFromCollection(result.slice(0,5));
