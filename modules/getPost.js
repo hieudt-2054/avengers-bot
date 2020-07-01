@@ -2,8 +2,8 @@ require('dotenv').config()
 var fs = require('fs');
 var exports = module.exports = {}
 const axios = require('axios').default;
-const moment = require('moment');
-moment.locale();
+const moment = require('moment-timezone');
+moment.tz.setDefault('Asia/Ho_Chi_Minh');
 const monthYear = moment().subtract(1, 'month').format('MM/YYYY');
 const nowYear = moment().format('MM/YYYY');
 var prevMonth = moment().subtract(1, 'month').startOf('month');
