@@ -22,7 +22,7 @@ const api = axios.create({
     for (var i = 0; i < collect.length; i++) {
         await api.get(`users/${collect[i].username}/posts?limit=20`)
         .then(function (response) {
-            const data = response.data.data.filter((x) => { return moment(x.published_at).format('MM') === prevMonth.format('MM') });
+            const data = response.data.data.filter((x) => { return moment(x.published_at).format('YYYY-MM') === prevMonth.format('YYYY-MM') });
             var result = data.sort((a, b) => (a.views_count < b.views_count) ? 1 : -1);
             arrResult.push(result[0].url)
         })
