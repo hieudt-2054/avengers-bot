@@ -16,7 +16,7 @@
     "avengers-chatwork": "^1.0.1",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.31",
     "node-cron": "^2.0.3"
   }
